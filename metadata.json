@@ -1,0 +1,6 @@
+{
+  "name": "Cadence Events",
+  "description": "Enterprise event management, ticketing, 40 custom event templates, 42-table relational schema, role-based organizer dashboard, reporting modules, and live QR ticket scanning.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

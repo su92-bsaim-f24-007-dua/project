@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}40 Custom Event Templates — Cadence Events{% endblock %}
+{% block content %}
+  <h1>40 Custom Event Templates</h1>
+  <div class="grid">
+    {% for tpl in templates %}
+      <article class="card">
+        <p class="meta">{{ tpl.code }} · {{ tpl.layout_style }}</p>
+        <h3>{{ tpl.name }}</h3>
+        <p>{{ tpl.description }}</p>
+        <p class="meta">Default Capacity: {{ tpl.default_capacity }} · {{ tpl.default_duration_hours }}h</p>
+      </article>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Gate Ticket Scanner — Cadence Events{% endblock %}
+{% block content %}
+  <h1>QR Ticket Verification Console</h1>
+  <form method="POST" action="{{ url_for('scanner_console') }}" class="card">
+    <label>Entry Gate
+      <select name="gate_id" required>
+        {% for gate in gates %}
+          <option value="{{ gate.id }}">{{ gate.gate_name }} ({{ gate.gate_code }})</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>Ticket Code
+      <input type="text" name="ticket_code" placeholder="CAD-1001-BRAVO" required />
+    </label>
+    <button type="submit">Verify & Check In</button>
+  </form>
+
+  <h2>Recent Scans</h2>
+  <ul>
+    {% for scan in scans %}
+      <li>{{ scan.scan_result }} · Event #{{ scan.event_id }} · Gate #{{ scan.gate_id }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

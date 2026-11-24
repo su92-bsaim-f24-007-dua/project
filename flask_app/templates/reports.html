@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Reporting Modules — Cadence Events{% endblock %}
+{% block content %}
+  <h1>Reporting & Compliance Modules</h1>
+  <h2>Saved Reports</h2>
+  <ul>
+    {% for rep in reports %}
+      <li>{{ rep.title }} ({{ rep.report_type }})</li>
+    {% endfor %}
+  </ul>
+  <h2>Audit Trail</h2>
+  <ul>
+    {% for al in audits %}
+      <li>{{ al.action }} · {{ al.entity_table }} · {{ al.details }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

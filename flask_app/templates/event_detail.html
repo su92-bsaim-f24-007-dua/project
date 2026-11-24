@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ event.title }} — Cadence Events{% endblock %}
+{% block content %}
+  <article class="card">
+    <h1>{{ event.title }}</h1>
+    <p>{{ event.description }}</p>
+    <p class="meta">Capacity: {{ event.capacity }} · Status: {{ event.status }}</p>
+    <h2>Ticket Tiers</h2>
+    <ul>
+      {% for tier in event.ticket_tiers %}
+        <li>{{ tier.name }} — ${{ "%.2f"|format(tier.price_cents / 100) }} ({{ tier.quantity_sold }}/{{ tier.quantity_total }} sold)</li>
+      {% endfor %}
+    </ul>
+  </article>
+{% endblock %}

@@ -1,0 +1,10 @@
+body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #f8fafc; color: #0f172a; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.topbar nav { display: flex; gap: 1.5rem; }
+.topbar a { text-decoration: none; color: #334155; font-weight: 500; }
+.container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1rem; }
+.flash { padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1rem; }
+.flash-success { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; }
+.flash-error { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
